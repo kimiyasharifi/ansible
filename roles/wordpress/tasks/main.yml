@@ -1,0 +1,27 @@
+---
+#tasks file for wordpress
+  - name: update and upgrade apt package
+    apt:
+      update_cache: yes
+      upgrade: yes
+
+  - name: Create docker/wordpress directory
+    file:
+      path: /tmp/docker
+      state: directory
+      owner: root
+      group: root
+      mode: 0755
+
+  - name: Create docker-compose file
+    copy:
+      src: ./docker-compose.yml
+      dest: /tmp/docker/docker-compose.yml
+      owner: root
+      group: root
+      mode: 0644
+
+  - name: Run docker-compose up -d
+    shell: docker-compose up -d
+    args:
+      chdir: /tmp/docker
