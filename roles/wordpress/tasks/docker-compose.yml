@@ -1,27 +1,25 @@
-version: '3.3'
+version: '3.7'
 
 services:
-  db:
-    image: mysql:latest
-    volumes:
-      - db_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: 9611974
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: 9611974
 
-  wordpress:
-    depends_on:
-      - db
-    image: wordpress:latest
-    ports:
-      - "8001:80"
-    restart: always
-    environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: 9611974
-volumes:
-  db_data:
+    #Wordpress
+    wordpress:
+        image: wordpress:latest
+        external_links: 
+            - mysql:db
+        volumes: 
+            - ./:/var/www/html
+        ports:
+            - "33003:80"
+        restart: always
+        container_name: wordpress
+        environment:
+            WORDPRESS_DB_HOST: db:3306
+            WORDPRESS_DB_USER: root
+            WORDPRESS_DB_PASSWORD: 9611974
+            WORDPRESS_DB_NAME: my_project_db
+
+networks:
+    default:
+        external: 
+            name: my_wordpress_network

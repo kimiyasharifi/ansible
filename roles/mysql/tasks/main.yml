@@ -1,8 +1,8 @@
 ---
-#tasks file for wordpress
-  - name: Create wordpress directory
+#tasks file for mysql
+  - name: Create mysql directory
     file:
-      path: /opt/wordpress/docker
+      path: /opt/mysql/docker
       state: directory
       owner: root
       group: root
@@ -11,7 +11,7 @@
   - name: Create docker-compose file
     copy:
       src: ./docker-compose.yml
-      dest: /opt/wordpress/docker/docker-compose.yml
+      dest: /opt/mysql/docker/docker-compose.yml
       owner: root
       group: root
       mode: 0644
@@ -19,4 +19,5 @@
   - name: Run docker-compose up -d
     shell: docker-compose up -d
     args:
-      chdir: /opt/wordpress/docker
+      chdir: /opt/mysql/docker
+
