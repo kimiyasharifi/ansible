@@ -2,7 +2,7 @@
 #tasks file for mysql
   - name: Create mysql directory
     file:
-      path: /opt/mysql/docker
+      path: /opt/docker/mysql
       state: directory
       owner: root
       group: root
@@ -11,7 +11,7 @@
   - name: Create docker-compose file
     copy:
       src: ./docker-compose.yml
-      dest: /opt/mysql/docker/docker-compose.yml
+      dest: /opt/docker/mysql/docker-compose.yml
       owner: root
       group: root
       mode: 0644
@@ -19,5 +19,5 @@
   - name: Run docker-compose up -d
     shell: docker-compose up -d
     args:
-      chdir: /opt/mysql/docker
+      chdir: /opt/docker/mysql
 
