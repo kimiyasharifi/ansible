@@ -16,6 +16,11 @@
       group: root
       mode: 0644
 
+      
+  - name: create network my_wordpress_network
+    shell: docker network create my_wordpress_network
+
+
   - name: Run docker-compose up -d
     shell: docker-compose up -d
     args:
