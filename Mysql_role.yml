@@ -1,7 +1,0 @@
----
-  - name: app server playbook
-    hosts: all
-    gather_facts: false
-    remote_user: root
-    roles:
-      - mysql 
