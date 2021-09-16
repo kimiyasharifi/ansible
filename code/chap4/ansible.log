@@ -1,0 +1,248 @@
+2021-07-24 15:50:50,500 p=236 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 15:50:50,501 p=236 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 15:50:52,421 p=236 u=root n=ansible | lb | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname lb: No address associated with hostname", 
+    "unreachable": true
+}
+2021-07-24 15:50:54,054 p=236 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host localhost should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform
+ python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+ more information. This feature will be removed in version 2.12. Deprecation warnings 
+can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-07-24 15:50:54,055 p=236 u=root n=ansible | localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-07-24 15:50:55,766 p=236 u=root n=ansible | app1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-07-24 15:50:55,768 p=236 u=root n=ansible | app2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-07-24 15:50:55,769 p=236 u=root n=ansible | db | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-07-24 15:51:06,321 p=326 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 15:51:06,322 p=326 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 15:51:06,955 p=326 u=root n=ansible | lb | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname lb: No address associated with hostname", 
+    "unreachable": true
+}
+2021-07-24 15:51:07,043 p=326 u=root n=ansible | [DEPRECATION WARNING]: Distribution Ubuntu 18.04 on host localhost should use 
+/usr/bin/python3, but is using /usr/bin/python for backward compatibility with prior 
+Ansible releases. A future Ansible release will default to using the discovered platform
+ python for this host. See 
+https://docs.ansible.com/ansible/2.9/reference_appendices/interpreter_discovery.html for
+ more information. This feature will be removed in version 2.12. Deprecation warnings 
+can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2021-07-24 15:51:07,044 p=326 u=root n=ansible | localhost | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-07-24 15:51:07,259 p=326 u=root n=ansible | app2 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-07-24 15:51:07,292 p=326 u=root n=ansible | db | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-07-24 15:51:07,311 p=326 u=root n=ansible | app1 | SUCCESS => {
+    "ansible_facts": {
+        "discovered_interpreter_python": "/usr/bin/python"
+    }, 
+    "changed": false, 
+    "ping": "pong"
+}
+2021-07-24 17:02:39,890 p=407 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:02:39,891 p=407 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:02:43,871 p=407 u=root n=ansible | [WARNING]: Consider using the yum module rather than running 'yum'.  If you need to use
+command because yum is insufficient you can add 'warn: false' to this command task or
+set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2021-07-24 17:02:43,872 p=407 u=root n=ansible | db | FAILED | rc=1 >>
+Loaded plugins: fastestmirror, ovlovl: Error while doing RPMdb copy-up:
+[Errno 13] Permission denied: '/var/lib/rpm/Dirnames'
+You need to be root to perform this command.non-zero return code
+
+2021-07-24 17:03:00,661 p=429 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:03:00,661 p=429 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:03:01,988 p=429 u=root n=ansible | app1 | FAILED | rc=2 >>
+[Errno 2] No such file or directory
+
+2021-07-24 17:03:42,937 p=460 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:03:42,937 p=460 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:03:44,226 p=460 u=root n=ansible | app2 | FAILED | rc=2 >>
+[Errno 2] No such file or directory
+
+2021-07-24 17:03:44,227 p=460 u=root n=ansible | app1 | FAILED | rc=2 >>
+[Errno 2] No such file or directory
+
+2021-07-24 17:04:45,118 p=494 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:04:45,118 p=494 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:04:46,747 p=494 u=root n=ansible | db | CHANGED | rc=0 >>
+ 17:04:46 up 11:30,  1 user,  load average: 0.91, 0.82, 0.91
+
+2021-07-24 17:04:46,984 p=494 u=root n=ansible | app2 | CHANGED | rc=0 >>
+ 17:04:46 up 11:30,  1 user,  load average: 0.91, 0.82, 0.91
+
+2021-07-24 17:04:46,985 p=494 u=root n=ansible | app1 | CHANGED | rc=0 >>
+ 17:04:46 up 11:30,  1 user,  load average: 0.91, 0.82, 0.91
+
+2021-07-24 17:05:05,441 p=546 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:05:05,441 p=546 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:05:07,097 p=546 u=root n=ansible | app2 | FAILED | rc=2 >>
+[Errno 2] No such file or directory
+
+2021-07-24 17:05:07,110 p=546 u=root n=ansible | app1 | FAILED | rc=2 >>
+[Errno 2] No such file or directory
+
+2021-07-24 17:05:44,125 p=577 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:05:44,125 p=577 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:05:45,559 p=577 u=root n=ansible | app1 | CHANGED | rc=0 >>
+app1
+
+2021-07-24 17:05:45,809 p=577 u=root n=ansible | db | CHANGED | rc=0 >>
+db
+
+2021-07-24 17:05:45,822 p=577 u=root n=ansible | app2 | CHANGED | rc=0 >>
+app2
+
+2021-07-24 17:06:24,969 p=620 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:06:24,969 p=620 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:06:26,332 p=620 u=root n=ansible | app1 | CHANGED | rc=0 >>
+Linux app1 5.8.0-63-generic #71~20.04.1-Ubuntu SMP Thu Jul 15 17:46:08 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+2021-07-24 17:06:26,587 p=620 u=root n=ansible | db | CHANGED | rc=0 >>
+Linux db 5.8.0-63-generic #71~20.04.1-Ubuntu SMP Thu Jul 15 17:46:08 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+2021-07-24 17:06:26,613 p=620 u=root n=ansible | app2 | CHANGED | rc=0 >>
+Linux app2 5.8.0-63-generic #71~20.04.1-Ubuntu SMP Thu Jul 15 17:46:08 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+2021-07-24 17:06:56,720 p=663 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:06:56,720 p=663 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:06:57,957 p=663 u=root n=ansible | app1 | FAILED | rc=2 >>
+[Errno 2] No such file or directory
+
+2021-07-24 17:07:13,540 p=682 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:07:13,541 p=682 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:07:14,851 p=682 u=root n=ansible | db | FAILED | rc=2 >>
+[Errno 2] No such file or directory
+
+2021-07-24 17:07:24,205 p=701 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:07:24,205 p=701 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:07:25,722 p=701 u=root n=ansible | [WARNING]: Consider using the yum module rather than running 'yum'.  If you need to
+use command because yum is insufficient you can add 'warn: false' to this command task
+or set 'command_warnings=False' in ansible.cfg to get rid of this message.
+
+2021-07-24 17:07:25,722 p=701 u=root n=ansible | db | FAILED | rc=1 >>
+Loaded plugins: fastestmirror, ovlovl: Error while doing RPMdb copy-up:
+[Errno 13] Permission denied: '/var/lib/rpm/Dirnames'
+You need to be root to perform this command.non-zero return code
+
+2021-07-24 17:10:48,653 p=723 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:10:48,654 p=723 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:10:50,235 p=723 u=root n=ansible | app2 | CHANGED | rc=0 >>
+             total       used       free     shared    buffers     cached
+Mem:       8030980    7650560     380420     424872    1200840    3485300
+-/+ buffers/cache:    2964420    5066560
+Swap:      2097148     134248    1962900
+
+2021-07-24 17:10:50,259 p=723 u=root n=ansible | db | CHANGED | rc=0 >>
+             total       used       free     shared    buffers     cached
+Mem:       8030980    7642560     388420     424872    1200840    3485300
+-/+ buffers/cache:    2956420    5074560
+Swap:      2097148     134248    1962900
+
+2021-07-24 17:10:50,296 p=723 u=root n=ansible | app1 | CHANGED | rc=0 >>
+             total       used       free     shared    buffers     cached
+Mem:       8030980    7617896     413084     424872    1200840    3485128
+-/+ buffers/cache:    2931928    5099052
+Swap:      2097148     134248    1962900
+
+2021-07-24 17:12:36,777 p=775 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:12:36,777 p=775 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:13:53,956 p=775 u=root n=ansible |  [ERROR]: User interrupted execution
+
+2021-07-24 17:14:31,397 p=794 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:14:31,397 p=794 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:14:34,741 p=794 u=root n=ansible | db | CHANGED | rc=0 >>
+
+
+2021-07-24 17:14:34,766 p=794 u=root n=ansible | app2 | CHANGED | rc=0 >>
+
+
+2021-07-24 17:14:34,768 p=794 u=root n=ansible | app1 | CHANGED | rc=0 >>
+
+
+2021-07-24 17:14:39,664 p=843 u=root n=ansible | [WARNING]: Found both group and host with same name: db
+
+2021-07-24 17:14:39,664 p=843 u=root n=ansible | [WARNING]: Found both group and host with same name: lb
+
+2021-07-24 17:14:41,186 p=843 u=root n=ansible | app2 | FAILED | rc=9 >>
+useradd: user 'kimia' already existsnon-zero return code
+
+2021-07-24 17:14:41,388 p=843 u=root n=ansible | db | FAILED | rc=9 >>
+useradd: user 'kimia' already existsnon-zero return code
+
+2021-07-24 17:14:41,393 p=843 u=root n=ansible | app1 | FAILED | rc=9 >>
+useradd: user 'kimia' already existsnon-zero return code
+
