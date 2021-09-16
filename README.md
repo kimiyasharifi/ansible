@@ -1,4 +1,4 @@
-# codespace-ansible-setup
+# ansible-setup
 
 Docker compose for running Codebox Web IDE and
 
